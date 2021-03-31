@@ -1,13 +1,13 @@
 package homework3.task3;
 
-public class Ship extends Vehicle{
+public class Ship extends Vehicle {
     String portName;
     int count;
 
-    public Ship(int count, String portName, double cost, double speed, int year){
+    public Ship(int count, String portName, double cost, double speed, int year) {
         super(cost, speed, year);
-        this.portName=portName;
-        this.count=count;
+        this.portName = portName;
+        this.count = count;
     }
 
     @Override

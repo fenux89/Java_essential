@@ -20,8 +20,6 @@ public class Main extends Printer {
         //task2 Не понятно как делать 2 задание, выполнил только половину. Можете объяснить после урока?
 
 
-
-
         // task3
         Vehicle ship = new Ship(15, "Petr", 1500, 120, 2020);
         Vehicle plane = new Plane(22, 100, 2000, 250, 2021);

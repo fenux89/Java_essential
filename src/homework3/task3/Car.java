@@ -1,7 +1,7 @@
 package homework3.task3;
 
-public class Car extends Vehicle{
-   public Car(double cost, double speed, int year){
+public class Car extends Vehicle {
+    public Car(double cost, double speed, int year) {
         super(cost, speed, year);
     }
 

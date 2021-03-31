@@ -1,20 +1,23 @@
 package homework3.task2;
 
-public class ExcelentPupil extends Pupil{
+public class ExcelentPupil extends Pupil {
     @Override
-    void study(){
+    void study() {
         System.out.println("Excelent study");
     }
+
     @Override
-    void read(){
+    void read() {
         System.out.println("Excelent read");
     }
+
     @Override
-    void write(){
+    void write() {
         System.out.println("Excelent write");
     }
+
     @Override
-    void relax(){
+    void relax() {
         System.out.println("Excelent relax");
     }
 }

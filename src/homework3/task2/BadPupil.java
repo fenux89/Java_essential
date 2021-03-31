@@ -2,19 +2,22 @@ package homework3.task2;
 
 public class BadPupil extends Pupil {
     @Override
-    void study(){
+    void study() {
         System.out.println("Bad study");
     }
+
     @Override
-    void read(){
+    void read() {
         System.out.println("Bad read");
     }
+
     @Override
-    void write(){
+    void write() {
         System.out.println("Bad write");
     }
+
     @Override
-    void relax(){
+    void relax() {
         System.out.println("Bad relax");
     }
 }
