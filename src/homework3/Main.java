@@ -19,6 +19,17 @@ public class Main extends Printer {
 
         //task2 Не понятно как делать 2 задание, выполнил только половину. Можете объяснить после урока?
 
+        ClassRoom classRoom = new ClassRoom(10);
+
+        classRoom.addPupil(new BadPupil());
+        classRoom.addPupil(new GoodPupil());
+        classRoom.addPupil(new GoodPupil());
+        classRoom.addPupil(new ExcelentPupil());
+
+        classRoom.showPupilsActions();
+
+
+
 
         // task3
         Vehicle ship = new Ship(15, "Petr", 1500, 120, 2020);
