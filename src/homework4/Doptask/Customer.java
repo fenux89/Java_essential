@@ -3,40 +3,32 @@ package homework4.Doptask;
 import java.util.ArrayList;
 
 public class Customer {
-    Integer id;
-    String username;
-    String password;
-    Integer profileId;
-    ArrayList<Integer> ServiceId = new ArrayList<>();
-    ArrayList<Integer> TiketId = new ArrayList<>();
-    Service service;
+   int id=0;
+   String username, password;
+   int profileID;
+   ArrayList<Integer> serviceID = new ArrayList<>();
+   ArrayList<Integer> tiketID = new ArrayList<>();
 
-    private Profile profile;
-
-    public Customer(Integer id, String username, String password) {
-        this.id = id;
+    public Customer(String username, String password){  //, int profileID,int serviceID, int tiketID) {
         this.username = username;
         this.password = password;
+//        this.profileID = profileID;
+//        this.serviceID.add(serviceID);
+//        this.tiketID.add(tiketID);
+
+        id++;
     }
 
-    public Profile getProfile() {
-        return profile;
+    public void setServiceID(int serviceID) {
+        this.serviceID.add(serviceID);
     }
 
-    public void setProfile(Profile profile) {
-        this.profile = profile;
+    public void setTiketID(int tiketID) {
+        this.tiketID.add(tiketID);
     }
 
-    public ArrayList<Integer> getServiceId() {
-        return ServiceId;
-    }
-
-    public void setServiceId(Integer serviceId) {
-        ServiceId.add(serviceId);
-    }
-
-    public Service getService() {
-
-        return service;
+    public void setProfileID(int profileID) {
+        this.profileID = profileID;
     }
 }
+

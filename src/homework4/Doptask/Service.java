@@ -3,34 +3,19 @@ package homework4.Doptask;
 import java.util.ArrayList;
 
 public class Service {
-    Integer id;
+    int id=0;
     String serviceName;
     Boolean isActive;
-    Integer serviceMonthPrice;
+    int serviceMonthPrice;
     ArrayList <Integer> custmerId = new ArrayList<>();
 
-    public Service(Integer id, String serviceName, Boolean isActive, Integer serviceMonthPrice) {
-        this.id = id;
+    public Service(String serviceName, Boolean isActive, int serviceMonthPrice, int custmerId) {
         this.serviceName = serviceName;
         this.isActive = isActive;
         this.serviceMonthPrice = serviceMonthPrice;
+        this.custmerId.add(custmerId);
+        id++;
     }
 
-    public ArrayList<Integer> getCustmerId() {
-        return custmerId;
-    }
 
-    public void setCustmerId(ArrayList<Integer> custmerId) {
-        this.custmerId = custmerId;
-    }
-
-    @Override
-    public String toString() {
-        return "Service{" +
-                "id=" + id +
-                ", serviceName='" + serviceName + '\'' +
-                ", isActive=" + isActive +
-                ", serviceMonthPrice=" + serviceMonthPrice +
-                '}';
-    }
 }
