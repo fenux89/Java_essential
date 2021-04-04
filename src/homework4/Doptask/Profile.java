@@ -1,7 +1,8 @@
 package homework4.Doptask;
 
 public class Profile {
-    int id=0;
+    static int count=1;
+    int id;
     String firstName;
     String lastName;
     String email;
@@ -11,6 +12,9 @@ public class Profile {
     int costomerID;
     int suportSpecialistID;
 
+    public Profile() {
+    }
+
     public Profile(String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int costomerID, int suportSpecialistID) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,14 +23,32 @@ public class Profile {
         this.address = address;
         this.postalCode = postalCode;
 
-        if (costomerID==0){
+        if (costomerID == 0) {
             this.suportSpecialistID = suportSpecialistID;
-        } else if (suportSpecialistID==0) {
+        } else if (suportSpecialistID == 0) {
             this.costomerID = costomerID;
         }
-
-        id++;
+        id=count++;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public int getCostomerID() {
+        return costomerID;
+    }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                '}';
+    }
 }

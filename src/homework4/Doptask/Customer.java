@@ -3,20 +3,24 @@ package homework4.Doptask;
 import java.util.ArrayList;
 
 public class Customer {
-   int id=0;
-   String username, password;
-   int profileID;
-   ArrayList<Integer> serviceID = new ArrayList<>();
-   ArrayList<Integer> tiketID = new ArrayList<>();
+    static int count = 1;
+    int id;
+    String username, password;
+    int profileID;
+    ArrayList<Integer> serviceID = new ArrayList<>();
+    ArrayList<Integer> tiketID = new ArrayList<>();
 
-    public Customer(String username, String password){  //, int profileID,int serviceID, int tiketID) {
+    public Customer() {
+    }
+
+    public Customer(String username, String password) {
         this.username = username;
         this.password = password;
-//        this.profileID = profileID;
-//        this.serviceID.add(serviceID);
-//        this.tiketID.add(tiketID);
+        id = count++;
+    }
 
-        id++;
+    public int getProfileID() {
+        return profileID;
     }
 
     public void setServiceID(int serviceID) {
@@ -29,6 +33,15 @@ public class Customer {
 
     public void setProfileID(int profileID) {
         this.profileID = profileID;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
 
