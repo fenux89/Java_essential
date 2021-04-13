@@ -31,22 +31,28 @@ public class Main {
 
         System.out.println("Введите название магазина");
         nameShop = in.readLine();
+        int count = 0;
         for (int i = 0; i < prices.length; i++) {
 
             if (prices[i].shopName.equals(nameShop)) {
                 System.out.println(prices[i]);
-            } else {
-                try {
-                    throw new MyException();
-                } catch (MyException e) {
-                    e.myExc();
-                }
+                count++;
             }
-
+        }
+        if (count == 0) {
+//            MyException me = new MyException();
+//            me.myExc();
+            // или так
+            try{
+                throw new MyException();
+            } catch (MyException e){
+                e.printStackTrace();
+                e.myExc();
+            }
         }
     }
 }
-    class MyException extends Exception {
+   class MyException extends Exception {
 
         public void myExc(){
             System.out.println("Такого магазина нет");

@@ -14,11 +14,21 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Введите число a: ");
-        double a = Double.parseDouble(in.readLine());
-
+        double a=0;
+        double b=0;
+        try {
+            a = Double.parseDouble(in.readLine());
+        } catch (Exception e){
+            System.out.println("Не правильный формат");
+            System.out.println(e.getMessage());
+        }
         System.out.print("Введите число b: ");
-        double b = Double.parseDouble(in.readLine());
-
+        try {
+            b = Double.parseDouble(in.readLine());
+        } catch (Exception e){
+            System.out.println("Не правильный формат");
+            System.out.println(e.getMessage());
+        }
         System.out.print("Введите операцию (+, -, *, /):");
         operation = in.readLine();
 

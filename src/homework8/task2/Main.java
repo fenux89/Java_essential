@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         Worker[] workers = new Worker[5];
-        int value;
+        int value=0;
         int yearNow = Calendar.getInstance().get(Calendar.YEAR);
 
         for (int i = 0; i < workers.length; i++) {
@@ -41,15 +41,18 @@ public class Main {
         }
 
         System.out.println("Введите значение по условию");
+        try {
+            value = Integer.parseInt(in.readLine());
+        } catch (Exception e){
+            System.out.println("Ввели не верный формат");
+        }
+        for (Worker worker : workers) {
 
-        value = Integer.parseInt(in.readLine());
-        for (int i = 0; i < workers.length; i++) {
-
-            int staj = yearNow - Integer.parseInt(workers[i].year);
+            int staj = yearNow - Integer.parseInt(worker.year);
 
 
             if (staj > value) {
-                System.out.println(workers[i]);
+                System.out.println(worker);
             }
         }
     }
