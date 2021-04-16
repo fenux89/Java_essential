@@ -39,6 +39,7 @@ public class Animal {
             result = 11 * result + (int) age;
             result = 11 * result + (tail ? 1 : 0);
             return Objects.hash(result);
-        } else return this.hashCode;
+        }
+        return this.hashCode;
     }
 }
