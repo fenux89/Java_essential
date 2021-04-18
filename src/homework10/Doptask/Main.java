@@ -1,5 +1,7 @@
 package homework10.Doptask;
 
+import java.util.ListIterator;
+
 public class Main {
     public static void main(String[] args) {
         MyArrayList<Integer> myArr = new MyArrayList<>();
@@ -19,5 +21,26 @@ public class Main {
         myArr.remove(2);
         System.out.println(myArr);
         System.out.println(myArr.get(2));
+        System.out.println(myArr.size());
+
+        MyArrayList.MyIterator inter = myArr.returnIterator();
+        System.out.println(inter.next());
+        Integer[] ww = (Integer[]) myArr.toArray(new Integer[0]);
+
+        for (Integer word : ww) {
+            System.out.println(word);
+        }
+        try {
+            System.out.println(inter.next());
+            System.out.println(inter.next());
+            System.out.println(inter.hasNext());
+            System.out.println(inter.hasPrevious());
+            System.out.println(inter.previous());
+            System.out.println(inter.previous());
+            System.out.println(inter.previous());
+            System.out.println(inter.previous());
+        } catch (Exception e){
+            System.out.println("Сработало исключение");
+        }
     }
 }
